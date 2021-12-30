@@ -76,11 +76,11 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         paragraphStyle.alignment = .center
         
         let memeTextAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.strokeColor: UIColor.black,
-            NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-            NSAttributedString.Key.strokeWidth:  CGFloat(-5),
-            NSAttributedString.Key.paragraphStyle: paragraphStyle
+            .strokeColor: UIColor.black,
+            .foregroundColor: UIColor.white,
+            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            .strokeWidth:  CGFloat(-5),
+            .paragraphStyle: paragraphStyle
         ]
         
         topTextField.defaultTextAttributes = memeTextAttributes
@@ -94,17 +94,21 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewWillDisappear(_ animated: Bool) {
         self.unsubscribeFromKeyboardNotifications()
     }
-
+    
+    func presentPickerViewController(source: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = source
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     @IBAction func onAlbumButtonTapHandler(_ sender: Any) {
         
         if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary) != true) {
             return
         }
         
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+        presentPickerViewController(source: .photoLibrary)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -145,11 +149,11 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
    
     @IBAction func onCameraButtonTapHandler(_ sender: Any) {
+        if (UIImagePickerController.isSourceTypeAvailable(.camera) != true) {
+            return
+        }
         
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
+        presentPickerViewController(source: .camera)
     }
     
     @IBAction func onCancelButtonTapHandler(_ sender: Any) {
@@ -191,11 +195,15 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
     }
     
+    func HideAndShowBars(_ isHidden: Bool) {
+        topToolBar.isHidden = isHidden
+        bottomToolBar.isHidden = isHidden
+    }
+    
     func generateMemedImage() -> UIImage {
         
         //Hide top and bottom toolbars
-        topToolBar.isHidden = true
-        bottomToolBar.isHidden = true
+        HideAndShowBars(false)
 
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -204,8 +212,7 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         UIGraphicsEndImageContext()
         
         //Show top and bottom toolbars
-        topToolBar.isHidden = false
-        bottomToolBar.isHidden = false
+        HideAndShowBars(true)
 
         return memedImage
     }
