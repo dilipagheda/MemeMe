@@ -19,9 +19,9 @@ class SentMeMeCollectionViewController: UICollectionViewController {
         return appDelegate.memes
     }
     
-    func calculateItemSize() {
+    func calculateItemSize(_ frameWidth: CGFloat) {
         let space:CGFloat = 3.0
-        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        let dimension = (frameWidth - (2 * space)) / 3.0
 
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
@@ -29,12 +29,12 @@ class SentMeMeCollectionViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        calculateItemSize()
         collectionView.reloadData()
+        calculateItemSize(view.frame.size.width)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        calculateItemSize()
+        calculateItemSize(size.width)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
