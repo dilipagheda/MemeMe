@@ -20,6 +20,10 @@ This project provided me practice to gain following skills in iOS Development.
 - Create custom table view cells
 - Implement user interfaces with tab views and collection views
 
+# Technology used
+- iOS, Swift, XCode
+Note: Swift 5 and xCode version 13.2.1 is used.
+
 ## Demo
 
 Please click on below image to see the demo on youtube.
