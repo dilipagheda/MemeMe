@@ -22,4 +22,6 @@ This project provided me practice to gain following skills in iOS Development.
 
 ## Demo
 
+Please click on below image to see the demo on youtube.
+
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/5mG8nOv65r4/0.jpg)](http://www.youtube.com/watch?v=5mG8nOv65r4 "iOS App Demo - Meme Me")
