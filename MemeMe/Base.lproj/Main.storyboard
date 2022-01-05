@@ -30,7 +30,7 @@
         <!--Sent Memes-->
         <scene sceneID="jr5-XZ-hWm">
             <objects>
-                <tabBarController id="3La-sx-lEO" customClass="SentMeMeTabBarController" customModule="MemeMe_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="3La-sx-lEO" customClass="SentMeMeTabBarController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Sent Memes" id="sFH-V4-Ap6"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jmb-Hi-g2b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -49,13 +49,13 @@
         <!--Sent Me Me Table View Controller-->
         <scene sceneID="rMs-nL-yUU">
             <objects>
-                <tableViewController id="aGI-ts-meV" customClass="SentMeMeTableViewController" customModule="MemeMe_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aGI-ts-meV" customClass="SentMeMeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="626-XJ-gBO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sentMeMeTableViewCell" rowHeight="134" id="9VV-Oj-osW" customClass="SentMeMeTableViewCell" customModule="MemeMe_v1" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sentMeMeTableViewCell" rowHeight="134" id="9VV-Oj-osW" customClass="SentMeMeTableViewCell" customModule="MemeMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="134"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VV-Oj-osW" id="7xp-zK-6dQ">
@@ -122,7 +122,7 @@
         <!--Sent Me Me Collection View Controller-->
         <scene sceneID="nuV-F6-9aT">
             <objects>
-                <collectionViewController id="8h3-cQ-Gsx" customClass="SentMeMeCollectionViewController" customModule="MemeMe_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="8h3-cQ-Gsx" customClass="SentMeMeCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qWy-ld-8xI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sentMeMeCollectionViewCell" id="U6g-FA-LtJ" customClass="SentMeMeCollectionViewCell" customModule="MemeMe_v1" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sentMeMeCollectionViewCell" id="U6g-FA-LtJ" customClass="SentMeMeCollectionViewCell" customModule="MemeMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u7o-gV-snI">
@@ -175,7 +175,7 @@
         <!--Me Me Detail View Controller-->
         <scene sceneID="q1t-om-JvN">
             <objects>
-                <viewController id="GzF-RK-wu8" customClass="MeMeDetailViewController" customModule="MemeMe_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GzF-RK-wu8" customClass="MeMeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zlg-Y2-oOv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,7 @@
         <!--Me Me Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="memeEditorViewController" id="BYZ-38-t0r" customClass="MeMeEditorViewController" customModule="MemeMe_v1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="memeEditorViewController" id="BYZ-38-t0r" customClass="MeMeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -365,7 +365,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pzs-nT-5f9"/>
+        <segue reference="ayk-zt-IFa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
