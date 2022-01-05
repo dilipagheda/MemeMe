@@ -14,9 +14,9 @@
             filePath = "MemeMe v1/MeMeEditorViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "onCancelButtonTapHandler(_:)"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "onCameraButtonTapHandler(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "MemeMe v1/MeMeEditorViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "keyboardWillShow(_:)"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "onCancelButtonTapHandler(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -135,6 +135,7 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 if completed {
                     self.saveMemedImage(memedImage)
                 }
+                self.dismiss(animated: true, completion: nil)
             }
         
         present(activityController, animated: true, completion: nil)
@@ -142,8 +143,12 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func saveMemedImage(_ memedImage: UIImage){
         
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        
         if let image = imageView.image {
-            let _ = Meme(topText: topTextField?.text ?? "TOP", bottomText: bottomTextField?.text ?? "BOTTOM", memedImage: image, originalImage: memedImage)
+            let meme = Meme(topText: topTextField?.text ?? "TOP", bottomText: bottomTextField?.text ?? "BOTTOM", memedImage: memedImage, originalImage: image)
+            appDelegate.memes.append(meme)
         }
        
     }
@@ -160,6 +165,7 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         imageView.image = nil
         self.setTextFieldDefaultText()
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -203,7 +209,7 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func generateMemedImage() -> UIImage {
         
         //Hide top and bottom toolbars
-        HideAndShowBars(false)
+        HideAndShowBars(true)
 
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -212,7 +218,7 @@ class MeMeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         UIGraphicsEndImageContext()
         
         //Show top and bottom toolbars
-        HideAndShowBars(true)
+        HideAndShowBars(false)
 
         return memedImage
     }
