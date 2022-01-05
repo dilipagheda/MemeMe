@@ -15,3 +15,7 @@ This project provided me practice to gain following skills in iOS Development.
 - Create Actions and Outlets with extremely high proficiency
 - Use a UIActivityViewController to share media with Facebook, Twitter, SMS, and Email
 - Describe the delegate pattern and give a full account of its importance and uses in iOS classes
+- Set up a navigation structure that creates an intuitive flow through the app
+- Build tables with datasources and delegates
+- Create custom table view cells
+- Implement user interfaces with tab views and collection views
